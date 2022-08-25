@@ -4,3 +4,4 @@ canvas.width = 800;
 canvas.height = 800;
 
 ctx.fillRect(50, 50, 100, 200);
+ctx.strokeRect(200, 50, 100, 200);
