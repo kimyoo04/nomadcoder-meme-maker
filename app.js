@@ -129,7 +129,7 @@ function onCanvasClick() {
 function onDestroyClick() {
   ctx.save();
   ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx.restore();
 }
 
@@ -143,7 +143,7 @@ function onEraserClick() {
 }
 
 //--------------------------------------------------------------------------------
-// onFileChange function - 캔버스 클릭할 때, canvas에 fillRect 실행 (색 채우기)
+// onFileChange function - 이미지 파일 업로드 시, 이미지를 캔버스에 꽉차게 그리기
 //--------------------------------------------------------------------------------
 function onFileChange(event) {
   const file = event.target.files[0];
@@ -157,7 +157,7 @@ function onFileChange(event) {
 }
 
 //--------------------------------------------------------------------------------
-// onDoubleClick function - 캔버스 클릭할 때, canvas에 fillRect 실행 (색 채우기)
+// onDoubleClick function - 캔버스에 더블 클릭할 때, canvas에 텍스트 그리기
 //--------------------------------------------------------------------------------
 function onDoubleClick(event) {
   const text = textInput.value;
